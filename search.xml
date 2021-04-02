@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2021/03/31/blog1/</url>
-    <content><![CDATA[<h1 id="博客建立"><a href="#博客建立" class="headerlink" title="博客建立"></a><strong>博客建立</strong></h1><hr>
-<p>之前一直想建个博客试一试，现在有点时间啦，也有孙嘉硕同学的指导和推荐，建一个小博客再慢慢完善吧！</p>
+    <title>hexo 添加标签和分类</title>
+    <url>/2021/03/28/blog1/</url>
+    <content><![CDATA[<p>之前一直想建个博客试一试，现在有点时间啦，也有孙嘉硕同学的指导和推荐，建一个小博客再慢慢完善吧！</p>
 <p>建立博客大概有安装软件，配置仓库，进行上传，选择主题，设置信息这几个步骤，依次列一列好啦</p>
 <hr>
 <h3 id="一、安装软件"><a href="#一、安装软件" class="headerlink" title="一、安装软件"></a>一、安装软件</h3><p>1.下载<a href="https://nodejs.org/en/">node.js</a>和<a href="https://git-scm.com/downloads/">Git</a>两个软件。</p>
@@ -89,6 +88,12 @@
 <p>好啦，第一篇博客到此为止！</p>
 <p>测试一下更改会怎么样！</p>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
   </entry>
   <entry>
     <title>python康复训练-1</title>
