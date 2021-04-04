@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo 添加标签和分类</title>
+    <title>hexo 博客建立</title>
     <url>/2021/03/28/blog1/</url>
     <content><![CDATA[<p>之前一直想建个博客试一试，现在有点时间啦，也有孙嘉硕同学的指导和推荐，建一个小博客再慢慢完善吧！</p>
 <p>建立博客大概有安装软件，配置仓库，进行上传，选择主题，设置信息这几个步骤，依次列一列好啦</p>
@@ -83,8 +83,8 @@
 <hr>
 <h3 id="四、信息设置"><a href="#四、信息设置" class="headerlink" title="四、信息设置"></a>四、信息设置</h3><p>修改博客的样式，需要修改主目录下的 _config.yml文件，以及themes/你的主题下的 _config.yml文件</p>
 <p>这个东西好玄妙的，我也没有弄清楚，嘉硕给了两个例子，依照这两个例子来好啦！</p>
-<p><a href="https://github.com/litten/hexo-theme-yilia/blob/master/_config.yml">主目录的_config.yml文件</a></p>
-<p><a href="https://github.com/litten/BlogBackup/blob/master/_config.yml">theme下的 _config.yml文件</a></p>
+<p><a href="https://github.com/litten/hexo-theme-yilia/blob/master/_config.yml">theme下的_config.yml文件</a></p>
+<p><a href="https://github.com/litten/BlogBackup/blob/master/_config.yml">主目录的 _config.yml文件</a></p>
 <p>好啦，第一篇博客到此为止！</p>
 <p>测试一下更改会怎么样！</p>
 ]]></content>
@@ -92,7 +92,7 @@
         <category>hexo</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
