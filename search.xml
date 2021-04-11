@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2021/04/11/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-1/</url>
+    <content><![CDATA[<p>title: python康复训练<br>date: 2021-03-28 23:00:34<br>categories:</p>
+<ul>
+<li>python<br>tags:</li>
+<li>python</li>
+</ul>
+<p>因为这次都是简单操作，也是康复训练，就不写什么解释啦，贴上实验的代码表示自己确实在努力试图康复好啦！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&quot;hello world&quot;)</span><br><span class="line">hello world</span><br><span class="line"></span><br><span class="line">2+3</span><br><span class="line">5</span><br><span class="line">2*3</span><br><span class="line">6</span><br><span class="line">2**3</span><br><span class="line">8</span><br><span class="line">4**2</span><br><span class="line">16</span><br><span class="line">（2+3）**4</span><br><span class="line">  File &quot;&lt;input&gt;&quot;, line 1</span><br><span class="line">    （2+3）**4</span><br><span class="line">     ^</span><br><span class="line">SyntaxError: invalid character in identifier</span><br><span class="line">(2+3)**4</span><br><span class="line">625</span><br><span class="line">a&#x3D;2</span><br><span class="line">b&#x3D;3</span><br><span class="line">a**b</span><br><span class="line">8</span><br><span class="line">3*0.1</span><br><span class="line">0.30000000000000004</span><br><span class="line">&quot;hello &quot;+str(a**b)+&quot;!&quot;</span><br><span class="line">&#39;hello 8!&#39;</span><br><span class="line">3&#x2F;2</span><br><span class="line">1.5</span><br><span class="line">int(2&#x2F;3)</span><br><span class="line">0</span><br><span class="line">import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#39;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#39;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#39;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#39;s do more of those!</span><br><span class="line">bicycle&#x3D;[&#39;123&#39;,&#39;234&#39;]</span><br><span class="line">bicycle</span><br><span class="line">[&#39;123&#39;, &#39;234&#39;]</span><br><span class="line">bicycle[0]</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[0].title()</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[-2]</span><br><span class="line">&#39;123&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>python康复训练-习题</title>
+    <url>/2021/04/11/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-%E4%B9%A0%E9%A2%98/</url>
+    <content><![CDATA[<p>在复习python操作的基础上，通过做一些pat的题目来巩固一下所学！题目比较基础，维持在至少一条一道的速度上，有时间会多做一些。</p>
+<hr>
+<h5 id="1-1001"><a href="#1-1001" class="headerlink" title="1.1001"></a>1.1001</h5><blockquote>
+<p>1001 害死人不偿命的(3n+1)猜想 (15 分)<br><br>&nbsp;&nbsp;卡拉兹(Callatz)猜想:<br><br>&nbsp;&nbsp;对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数， 那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……<br><br>&nbsp;&nbsp;我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
+</blockquote>
+<p>只要根据他的要求写一个循环就好</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">n&#x3D;input()</span><br><span class="line">n&#x3D;int(n)</span><br><span class="line">i&#x3D;0</span><br><span class="line">while(n!&#x3D;1):</span><br><span class="line">  if(n%2&#x3D;&#x3D;0):</span><br><span class="line">    n&#x3D;n&#x2F;2</span><br><span class="line">  else:</span><br><span class="line">    n&#x3D;(3*n+1)&#x2F;2</span><br><span class="line">  i&#x3D;i+1</span><br><span class="line">print(i)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h5 id="2-1002"><a href="#2-1002" class="headerlink" title="2.1002"></a>2.1002</h5><blockquote>
+<p>1002 写出这个数 (20 分)<br><br>&nbsp;&nbsp;读入一个正整数 n，计算其各位数字之和，用汉语拼音写出和的每一位数字。</p>
+</blockquote>
+<p>题目描述很简单，这道题应用列表存储数据再进行string和int的转化即可，python中不同格式的转化十分方便！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nums&#x3D;input()</span><br><span class="line">sum&#x3D;0</span><br><span class="line">for i in nums:</span><br><span class="line">    sum&#x3D;sum+int(i)</span><br><span class="line">teans&#x3D;[&#39;ling&#39;,&#39;yi&#39;,&#39;er&#39;,&#39;san&#39;,&#39;si&#39;,&#39;wu&#39;,&#39;liu&#39;,&#39;qi&#39;,&#39;ba&#39;,&#39;jiu&#39;]</span><br><span class="line">result&#x3D;[]</span><br><span class="line">for i in str(sum):</span><br><span class="line">    result.append(teans[int(i)])</span><br><span class="line">#print(result)</span><br><span class="line">for i in range(len(result)-1):</span><br><span class="line">    print(result[i],end&#x3D;&#39; &#39;)</span><br><span class="line">print(result[len(result)-1])</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo 博客建立</title>
     <url>/2021/03/28/blog1/</url>
     <content><![CDATA[<p>之前一直想建个博客试一试，现在有点时间啦，也有孙嘉硕同学的指导和推荐，建一个小博客再慢慢完善吧！</p>
@@ -94,11 +131,6 @@
       <tags>
         <tag>博客</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>python康复训练-1</title>
-    <url>/2021/03/27/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-1/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
