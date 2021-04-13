@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python," />
 
 
 
@@ -79,16 +79,45 @@
 
 
 
-<meta name="description" content="本科即将毕业，研究生方向人工智能">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tinker&#39;s Blog">
-<meta property="og:url" content="https://tinkerver.github.io/categories/hexo/index.html">
+<meta name="description" content="昨天做了一道关于模式匹配的习题，使用正则表达式可以很快速的实现功能。正则表达式在好久之前有过接触，但一直没有系统的进行学习，今天借这个机会来总结一下！ 正则表达式的基础介绍正则可以用以方便的匹配不同形式的数据，比如在输入框中匹配符合格式的手机号，身份证号以及密码，账户格式等等，且正则表达式在做数据处理时也十分常用，比如提取一个爬虫所爬出的html格式中的文件，使用正则表达式可以很方便地以易于处理的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Tinker&#39;s Blog">
-<meta property="og:description" content="本科即将毕业，研究生方向人工智能">
+<meta property="og:description" content="昨天做了一道关于模式匹配的习题，使用正则表达式可以很快速的实现功能。正则表达式在好久之前有过接触，但一直没有系统的进行学习，今天借这个机会来总结一下！ 正则表达式的基础介绍正则可以用以方便的匹配不同形式的数据，比如在输入框中匹配符合格式的手机号，身份证号以及密码，账户格式等等，且正则表达式在做数据处理时也十分常用，比如提取一个爬虫所爬出的html格式中的文件，使用正则表达式可以很方便地以易于处理的">
 <meta property="og:locale">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/3.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/4.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/5.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/6.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/7.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/8.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/9.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/10.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/11.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/12.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/13.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/14.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/15.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/16.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/17.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/18.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/19.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/20.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/21.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/22.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/23.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/24.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/25.jpg">
+<meta property="og:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/26.jpg">
+<meta property="article:published_time" content="2021-04-13T02:10:11.000Z">
+<meta property="article:modified_time" content="2021-04-13T14:05:53.554Z">
 <meta property="article:author" content="Tinker">
-<meta property="article:tag" content="本科，毕业设计，人工智能">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg">
 
 
 
@@ -118,13 +147,13 @@
 
 
 
-  <link rel="canonical" href="https://tinkerver.github.io/categories/hexo/"/>
+  <link rel="canonical" href="https://tinkerver.github.io/2021/04/13/正则表达式/"/>
 
 
 
 
 
-  <title>分类: hexo | Tinker's Blog</title>
+  <title>正则表达式 | Tinker's Blog</title>
   
 
 
@@ -143,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,55 +320,354 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>hexo<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://tinkerver.github.io/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Tinker's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2021/03/28/blog1/" itemprop="url">
-              
-                <span itemprop="name">hexo 博客建立</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">正则表达式</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2021-03-28T23:00:34+08:00"
-              content="2021-03-28" >
-          03-28
-        </time>
-      </div>
+        <div class="post-meta">
+			
 
-    </header>
-  </article>
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于&#58;</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-13T10:10:11+08:00">
+                2021-04-13
+              </time>
+            
 
+            
+
+            
+          </span>
+		  
+		  
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+                               
+                <span class="post-meta-item-text">分类于&#58;</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">正则表达式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>昨天做了一道关于模式匹配的习题，使用正则表达式可以很快速的实现功能。正则表达式在好久之前有过接触，但一直没有系统的进行学习，今天借这个机会来总结一下！</p>
+<h1 id="正则表达式的基础介绍"><a href="#正则表达式的基础介绍" class="headerlink" title="正则表达式的基础介绍"></a>正则表达式的基础介绍</h1><p>正则可以用以方便的匹配不同形式的数据，比如在输入框中匹配符合格式的手机号，身份证号以及密码，账户格式等等，且正则表达式在做数据处理时也十分常用，比如提取一个爬虫所爬出的html格式中的文件，使用正则表达式可以很方便地以易于处理的格式拿出我们需要的信息。</p>
+<p>在学习中看到了推荐的两个网站，可用于后面对正则的巩固测试和练习<br><a target="_blank" rel="noopener" href="https://regexr-cn.com/">https://regexr-cn.com/</a><br><br><a target="_blank" rel="noopener" href="https://codejiaonang.com/">https://codejiaonang.com/</a></p>
+<span id="more"></span>
+
+
+
+<h1 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h1><h4 id="【】为一个字符组，用于匹配中括号中的元素任意一次"><a href="#【】为一个字符组，用于匹配中括号中的元素任意一次" class="headerlink" title="【】为一个字符组，用于匹配中括号中的元素任意一次"></a>【】为一个字符组，用于匹配中括号中的元素任意一次</h4><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" class="" title="[]">
+
+<p>在这个例子中，字符组的应用让我们同时匹配大小写的p</p>
+<p>在字符组中，-可以用以表示区间</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.jpg" class="" title="[]">
+
+<p>可以发现，对于0-9都能够进行匹配<br>同理，[a-z]可以对所有小写英文字母进行匹配</p>
+<p>在字符组中，如果要匹配例如-的特殊字符如-，需要使用转义/</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/3.jpg" class="" title="[]">
+
+<p>即为这样实现</p>
+<p>^可以用以取非，即为不匹配在此字符集中的全部信息。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/4.jpg" class="" title="[]">
+
+<p>当使用^时，所有字符集中原本会被匹配的字符都不再被匹配，而原本不会被匹配的部分则会被匹配。</p>
+<h4 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h4><table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>匹配结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\s</td>
+<td>匹配空白</td>
+<td>即为匹配空格</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界</td>
+<td>用来寻找单词的边界，一般以\bword\b的格式来使用</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字</td>
+<td>与[0-9]功能一致</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配数字，字母，下划线</td>
+<td>对这些字符进行匹配</td>
+</tr>
+</tbody></table>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/5.jpg" class="" title="[]">
+
+<p>应用快捷方式可以更方便的完成正则表达的匹配</p>
+<p>快捷方式同样可以取反，将转移的字母改为大写即为取反。如\D 为对数字的取反</p>
+<p>对于不在字符组中的^会表示从字符串开头开始匹配的意思</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/6.jpg" class="" title="[]">
+
+<p>在这个例子中加上了^的正则式只会匹配位于开头的python</p>
+<p>相对的，$符号可以表示从字符串尾部开始匹配，同样的一个字符</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/7.jpg" class="" title="[]">
+
+<p>更换为$匹配的就是尾部了</p>
+<h4 id="其他匹配"><a href="#其他匹配" class="headerlink" title="其他匹配"></a>其他匹配</h4><p>.可以对任意字符进行匹配</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/8.jpg" class="" title="[]">
+
+
+<p>？表示可选字符，匹配？前面的字符一次或者零次</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/9.jpg" class="" title="[]">
+
+<p>.？可以用于表示前面有或没有任意字符都可</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/10.jpg" class="" title="[]">
+
+
+<p>大括号可以用于匹配多个数据</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/11.jpg" class="" title="[]">
+
+<p>可以匹配像这样的格式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/12.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/13.jpg" class="" title="[]">
+
+<p>在大括号中使用逗号可以给定匹配个数的区间。如果在大括号后用问号则表示进入非贪婪模式，即为每次只匹配尽量少的长度</p>
+<p>还有开闭区间的匹配</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/14.jpg" class="" title="[]">
+
+<p>当少写逗号后面的数字表示匹配个数以上</p>
+<p>对于快速表示，+相当于{1，}而*相当于{0，}<br>可以更加方便的进行表示</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/15.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/16.jpg" class="" title="[]">
+
+
+<p>凭借以上的知识，就可以写出用以验证电话号码的正则式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/17.jpg" class="" title="[]">
+
+<p>同理，也能得到验证网址的正则式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/18.jpg" class="" title="[]">
+
+<hr>
+<p>到现在我们就完成了正则的基础部分，可以进行进阶部分的学习</p>
+<h1 id="正则进阶"><a href="#正则进阶" class="headerlink" title="正则进阶"></a>正则进阶</h1><h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><p>使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/19.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/20.jpg" class="" title="[]">
+
+<p>使用|可以写出或者条件。<br>例如要提取所有图片文件的后缀名，可以在各个后缀名之间加上一个 |符号：</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/21.jpg" class="" title="[]">
+
+<p>通过上面两个例子能比较清晰的了解分组作用，至此也就具备了解决之前所做到题的能力。</p>
+<p>分组也有非捕获分组</p>
+<p>有时候，我们并不需要捕获某个分组的内容，但是又想使用分组的特性。<br>这个时候就可以使用非捕获组(?:表达式)，从而不捕获数据，还能使用分组的功能。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/22.jpg" class="" title="[]">
+
+<p>在这个例子中第一个分组就没有被捕获。但依照它的形式能够使用或者条件，这也是分组的应用</p>
+<h6 id="分组中的回溯引用"><a href="#分组中的回溯引用" class="headerlink" title="分组中的回溯引用"></a>分组中的回溯引用</h6><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/23.jpg" class="" title="[]">
+
+<p>通过\数字的形式，可以回溯匹配之前分组的内容的表示，在收集html网页中不同标签内的内容很有帮助。</p>
+<h6 id="环视（正向先行断言）"><a href="#环视（正向先行断言）" class="headerlink" title="环视（正向先行断言）"></a>环视（正向先行断言）</h6><p>正向先行断言：(?=表达式)，指在某个位置向右看，表示所在位置右侧必须能匹配表达式</p>
+<p>例如：</p>
+<p>我喜欢你 我喜欢 我喜欢我 喜欢 喜欢你</p>
+<p>如果要取出喜欢两个字，要求这个喜欢后面有你，这个时候就要这么写：喜欢(?=你)，这就是正向先行断言。</p>
+<p>先行断言可以用来判断字符串是否符合特定的规则，例如提取包含至少一个大小写字母的字符串</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/24.jpg" class="" title="[]">
+
+<h6 id="反向先行断言"><a href="#反向先行断言" class="headerlink" title="反向先行断言"></a>反向先行断言</h6><p>反向先行断言(?!表达式)的作用是保证右边不能出现某字符。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/25.jpg" class="" title="[]">
+
+<h6 id="正向后行断言"><a href="#正向后行断言" class="headerlink" title="正向后行断言"></a>正向后行断言</h6><p>先行断言和后行断言只有一个区别，即先行断言从左往右看，后行断言从右往左看。</p>
+<p>正向后行断言：(?&lt;=表达式)，指在某个位置向左看，表示所在位置左侧必须能匹配表达式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/26.jpg" class="" title="[]">
+
+<h6 id="反向后行断言"><a href="#反向后行断言" class="headerlink" title="反向后行断言"></a>反向后行断言</h6><p>反向后行断言：(?&lt;!表达式)，指在某个位置向左看，表示所在位置左侧不能匹配表达式</p>
+<p>（这个题是做崩了，看了一会儿没看明白！找了本电子书再拜读一下好了！）</p>
+<hr>
+<p>这篇博客就写到这里啦，关于正则其实还并没有完全掌握，后面学习时有机会会再做些补充</p>
 
       
     </div>
 
+    
+    
+    
+	<div>
+      
+        
+      
+	</div>
+
+    
+
+    
+
+    
+	<div>
+		
+		<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+		
+	</div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/04/11/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-%E4%B9%A0%E9%A2%98/" rel="next" title="python康复训练-习题">
+                <i class="fa fa-chevron-left"></i> python康复训练-习题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -347,6 +675,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -367,8 +699,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -448,6 +789,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">正则表达式的基础介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.</span> <span class="nav-text">基础学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E3%80%90%E3%80%91%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%BB%84%EF%BC%8C%E7%94%A8%E4%BA%8E%E5%8C%B9%E9%85%8D%E4%B8%AD%E6%8B%AC%E5%8F%B7%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E4%BB%BB%E6%84%8F%E4%B8%80%E6%AC%A1"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">【】为一个字符组，用于匹配中括号中的元素任意一次</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">快捷方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%8C%B9%E9%85%8D"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">其他匹配</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E8%BF%9B%E9%98%B6"><span class="nav-number">3.</span> <span class="nav-text">正则进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%86%E7%BB%84"><span class="nav-number">3.0.0.0.1.</span> <span class="nav-text">分组</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E4%B8%AD%E7%9A%84%E5%9B%9E%E6%BA%AF%E5%BC%95%E7%94%A8"><span class="nav-number">3.0.0.0.1.1.</span> <span class="nav-text">分组中的回溯引用</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E7%8E%AF%E8%A7%86%EF%BC%88%E6%AD%A3%E5%90%91%E5%85%88%E8%A1%8C%E6%96%AD%E8%A8%80%EF%BC%89"><span class="nav-number">3.0.0.0.1.2.</span> <span class="nav-text">环视（正向先行断言）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E5%85%88%E8%A1%8C%E6%96%AD%E8%A8%80"><span class="nav-number">3.0.0.0.1.3.</span> <span class="nav-text">反向先行断言</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E6%AD%A3%E5%90%91%E5%90%8E%E8%A1%8C%E6%96%AD%E8%A8%80"><span class="nav-number">3.0.0.0.1.4.</span> <span class="nav-text">正向后行断言</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%8F%8D%E5%90%91%E5%90%8E%E8%A1%8C%E6%96%AD%E8%A8%80"><span class="nav-number">3.0.0.0.1.5.</span> <span class="nav-text">反向后行断言</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -597,6 +954,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

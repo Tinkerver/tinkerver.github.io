@@ -1,16 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2021/04/11/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-1/</url>
-    <content><![CDATA[<p>title: python康复训练<br>date: 2021-03-28 23:00:34<br>categories:</p>
-<ul>
-<li>python<br>tags:</li>
-<li>python</li>
-</ul>
-<p>因为这次都是简单操作，也是康复训练，就不写什么解释啦，贴上实验的代码表示自己确实在努力试图康复好啦！</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&quot;hello world&quot;)</span><br><span class="line">hello world</span><br><span class="line"></span><br><span class="line">2+3</span><br><span class="line">5</span><br><span class="line">2*3</span><br><span class="line">6</span><br><span class="line">2**3</span><br><span class="line">8</span><br><span class="line">4**2</span><br><span class="line">16</span><br><span class="line">（2+3）**4</span><br><span class="line">  File &quot;&lt;input&gt;&quot;, line 1</span><br><span class="line">    （2+3）**4</span><br><span class="line">     ^</span><br><span class="line">SyntaxError: invalid character in identifier</span><br><span class="line">(2+3)**4</span><br><span class="line">625</span><br><span class="line">a&#x3D;2</span><br><span class="line">b&#x3D;3</span><br><span class="line">a**b</span><br><span class="line">8</span><br><span class="line">3*0.1</span><br><span class="line">0.30000000000000004</span><br><span class="line">&quot;hello &quot;+str(a**b)+&quot;!&quot;</span><br><span class="line">&#39;hello 8!&#39;</span><br><span class="line">3&#x2F;2</span><br><span class="line">1.5</span><br><span class="line">int(2&#x2F;3)</span><br><span class="line">0</span><br><span class="line">import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#39;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#39;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#39;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#39;s do more of those!</span><br><span class="line">bicycle&#x3D;[&#39;123&#39;,&#39;234&#39;]</span><br><span class="line">bicycle</span><br><span class="line">[&#39;123&#39;, &#39;234&#39;]</span><br><span class="line">bicycle[0]</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[0].title()</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[-2]</span><br><span class="line">&#39;123&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>正则表达式</title>
+    <url>/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<p>昨天做了一道关于模式匹配的习题，使用正则表达式可以很快速的实现功能。正则表达式在好久之前有过接触，但一直没有系统的进行学习，今天借这个机会来总结一下！</p>
+<h1 id="正则表达式的基础介绍"><a href="#正则表达式的基础介绍" class="headerlink" title="正则表达式的基础介绍"></a>正则表达式的基础介绍</h1><p>正则可以用以方便的匹配不同形式的数据，比如在输入框中匹配符合格式的手机号，身份证号以及密码，账户格式等等，且正则表达式在做数据处理时也十分常用，比如提取一个爬虫所爬出的html格式中的文件，使用正则表达式可以很方便地以易于处理的格式拿出我们需要的信息。</p>
+<p>在学习中看到了推荐的两个网站，可用于后面对正则的巩固测试和练习<br><a href="https://regexr-cn.com/">https://regexr-cn.com/</a><br><br><a href="https://codejiaonang.com/">https://codejiaonang.com/</a></p>
+<span id="more"></span>
+
+
+
+<h1 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h1><h4 id="【】为一个字符组，用于匹配中括号中的元素任意一次"><a href="#【】为一个字符组，用于匹配中括号中的元素任意一次" class="headerlink" title="【】为一个字符组，用于匹配中括号中的元素任意一次"></a>【】为一个字符组，用于匹配中括号中的元素任意一次</h4><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" class="" title="[]">
+
+<p>在这个例子中，字符组的应用让我们同时匹配大小写的p</p>
+<p>在字符组中，-可以用以表示区间</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/2.jpg" class="" title="[]">
+
+<p>可以发现，对于0-9都能够进行匹配<br>同理，[a-z]可以对所有小写英文字母进行匹配</p>
+<p>在字符组中，如果要匹配例如-的特殊字符如-，需要使用转义/</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/3.jpg" class="" title="[]">
+
+<p>即为这样实现</p>
+<p>^可以用以取非，即为不匹配在此字符集中的全部信息。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/4.jpg" class="" title="[]">
+
+<p>当使用^时，所有字符集中原本会被匹配的字符都不再被匹配，而原本不会被匹配的部分则会被匹配。</p>
+<h4 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h4><table>
+<thead>
+<tr>
+<th>转义字符</th>
+<th>匹配结果</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\s</td>
+<td>匹配空白</td>
+<td>即为匹配空格</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>匹配单词边界</td>
+<td>用来寻找单词的边界，一般以\bword\b的格式来使用</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>匹配数字</td>
+<td>与[0-9]功能一致</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配数字，字母，下划线</td>
+<td>对这些字符进行匹配</td>
+</tr>
+</tbody></table>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/5.jpg" class="" title="[]">
+
+<p>应用快捷方式可以更方便的完成正则表达的匹配</p>
+<p>快捷方式同样可以取反，将转移的字母改为大写即为取反。如\D 为对数字的取反</p>
+<p>对于不在字符组中的^会表示从字符串开头开始匹配的意思</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/6.jpg" class="" title="[]">
+
+<p>在这个例子中加上了^的正则式只会匹配位于开头的python</p>
+<p>相对的，$符号可以表示从字符串尾部开始匹配，同样的一个字符</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/7.jpg" class="" title="[]">
+
+<p>更换为$匹配的就是尾部了</p>
+<h4 id="其他匹配"><a href="#其他匹配" class="headerlink" title="其他匹配"></a>其他匹配</h4><p>.可以对任意字符进行匹配</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/8.jpg" class="" title="[]">
+
+
+<p>？表示可选字符，匹配？前面的字符一次或者零次</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/9.jpg" class="" title="[]">
+
+<p>.？可以用于表示前面有或没有任意字符都可</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/10.jpg" class="" title="[]">
+
+
+<p>大括号可以用于匹配多个数据</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/11.jpg" class="" title="[]">
+
+<p>可以匹配像这样的格式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/12.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/13.jpg" class="" title="[]">
+
+<p>在大括号中使用逗号可以给定匹配个数的区间。如果在大括号后用问号则表示进入非贪婪模式，即为每次只匹配尽量少的长度</p>
+<p>还有开闭区间的匹配</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/14.jpg" class="" title="[]">
+
+<p>当少写逗号后面的数字表示匹配个数以上</p>
+<p>对于快速表示，+相当于{1，}而*相当于{0，}<br>可以更加方便的进行表示</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/15.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/16.jpg" class="" title="[]">
+
+
+<p>凭借以上的知识，就可以写出用以验证电话号码的正则式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/17.jpg" class="" title="[]">
+
+<p>同理，也能得到验证网址的正则式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/18.jpg" class="" title="[]">
+
+<hr>
+<p>到现在我们就完成了正则的基础部分，可以进行进阶部分的学习</p>
+<h1 id="正则进阶"><a href="#正则进阶" class="headerlink" title="正则进阶"></a>正则进阶</h1><h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><p>使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/19.jpg" class="" title="[]">
+
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/20.jpg" class="" title="[]">
+
+<p>使用|可以写出或者条件。<br>例如要提取所有图片文件的后缀名，可以在各个后缀名之间加上一个 |符号：</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/21.jpg" class="" title="[]">
+
+<p>通过上面两个例子能比较清晰的了解分组作用，至此也就具备了解决之前所做到题的能力。</p>
+<p>分组也有非捕获分组</p>
+<p>有时候，我们并不需要捕获某个分组的内容，但是又想使用分组的特性。<br>这个时候就可以使用非捕获组(?:表达式)，从而不捕获数据，还能使用分组的功能。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/22.jpg" class="" title="[]">
+
+<p>在这个例子中第一个分组就没有被捕获。但依照它的形式能够使用或者条件，这也是分组的应用</p>
+<h6 id="分组中的回溯引用"><a href="#分组中的回溯引用" class="headerlink" title="分组中的回溯引用"></a>分组中的回溯引用</h6><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/23.jpg" class="" title="[]">
+
+<p>通过\数字的形式，可以回溯匹配之前分组的内容的表示，在收集html网页中不同标签内的内容很有帮助。</p>
+<h6 id="环视（正向先行断言）"><a href="#环视（正向先行断言）" class="headerlink" title="环视（正向先行断言）"></a>环视（正向先行断言）</h6><p>正向先行断言：(?=表达式)，指在某个位置向右看，表示所在位置右侧必须能匹配表达式</p>
+<p>例如：</p>
+<p>我喜欢你 我喜欢 我喜欢我 喜欢 喜欢你</p>
+<p>如果要取出喜欢两个字，要求这个喜欢后面有你，这个时候就要这么写：喜欢(?=你)，这就是正向先行断言。</p>
+<p>先行断言可以用来判断字符串是否符合特定的规则，例如提取包含至少一个大小写字母的字符串</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/24.jpg" class="" title="[]">
+
+<h6 id="反向先行断言"><a href="#反向先行断言" class="headerlink" title="反向先行断言"></a>反向先行断言</h6><p>反向先行断言(?!表达式)的作用是保证右边不能出现某字符。</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/25.jpg" class="" title="[]">
+
+<h6 id="正向后行断言"><a href="#正向后行断言" class="headerlink" title="正向后行断言"></a>正向后行断言</h6><p>先行断言和后行断言只有一个区别，即先行断言从左往右看，后行断言从右往左看。</p>
+<p>正向后行断言：(?&lt;=表达式)，指在某个位置向左看，表示所在位置左侧必须能匹配表达式</p>
+<img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/26.jpg" class="" title="[]">
+
+<h6 id="反向后行断言"><a href="#反向后行断言" class="headerlink" title="反向后行断言"></a>反向后行断言</h6><p>反向后行断言：(?&lt;!表达式)，指在某个位置向左看，表示所在位置左侧不能匹配表达式</p>
+<p>（这个题是做崩了，看了一会儿没看明白！找了本电子书再拜读一下好了！）</p>
+<hr>
+<p>这篇博客就写到这里啦，关于正则其实还并没有完全掌握，后面学习时有机会会再做些补充</p>
 ]]></content>
+      <categories>
+        <category>正则表达式</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
     <title>python康复训练-习题</title>
@@ -29,6 +164,23 @@
 </blockquote>
 <p>题目描述很简单，这道题应用列表存储数据再进行string和int的转化即可，python中不同格式的转化十分方便！</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nums&#x3D;input()</span><br><span class="line">sum&#x3D;0</span><br><span class="line">for i in nums:</span><br><span class="line">    sum&#x3D;sum+int(i)</span><br><span class="line">teans&#x3D;[&#39;ling&#39;,&#39;yi&#39;,&#39;er&#39;,&#39;san&#39;,&#39;si&#39;,&#39;wu&#39;,&#39;liu&#39;,&#39;qi&#39;,&#39;ba&#39;,&#39;jiu&#39;]</span><br><span class="line">result&#x3D;[]</span><br><span class="line">for i in str(sum):</span><br><span class="line">    result.append(teans[int(i)])</span><br><span class="line">#print(result)</span><br><span class="line">for i in range(len(result)-1):</span><br><span class="line">    print(result[i],end&#x3D;&#39; &#39;)</span><br><span class="line">print(result[len(result)-1])</span><br></pre></td></tr></table></figure>
+<h5 id="3-1003"><a href="#3-1003" class="headerlink" title="3.1003"></a>3.1003</h5><blockquote>
+<p>1003 我要通过！ (20 分)<br><br>&nbsp;&nbsp;“答案正确”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“答案正确”大派送 —— 只要读入的字符串满足下列条件，系统就输出“答案正确”，否则输出“答案错误”。<br><br>&nbsp;&nbsp;得到“答案正确”的条件是：<br><br>&nbsp;&nbsp;字符串中必须仅有 P、 A、 T这三种字符，不可以包含其它字符；<br><br>&nbsp;&nbsp;任意形如 xPATx 的字符串都可以获得“答案正确”，其中 x或者是空字符串，或者是仅由字母 A 组成的字符串；<br><br>&nbsp;&nbsp;如果 aPbTc 是正确的，那么 aPbATca 也是正确的，其中 a、 b、 c 均或者是空字符串，或者是仅由字母 A 组成的字符串。<br><br>&nbsp;&nbsp;现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“答案正确”的。<br></p>
+</blockquote>
+<p>这个题目开始尝试了字符串的处理方法，后面发现想感觉尝试正则表达会更加简便，在做题后进行了对于正则表达式的学习，对于正则表达式的总结写在了另一篇博客上。这道题也同样是一道比较考验理解能力的题目。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">n&#x3D;input()</span><br><span class="line">n&#x3D;int(n)</span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    pa &#x3D; re.compile(r&quot;(?P&lt;a&gt;A*)P(?P&lt;b&gt;A+)T(?P&lt;c&gt;A*)&quot;)</span><br><span class="line">    if pa.match(s):</span><br><span class="line">        co &#x3D; re.split(r&quot;P|T&quot;, s)</span><br><span class="line">        if len(co[0]) * len(co[1]) &#x3D;&#x3D; len(co[2]):</span><br><span class="line">            print(&quot;YES&quot;)</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;NO&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;NO&quot;)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python康复训练-操作</title>
+    <url>/2021/04/05/python%E5%BA%B7%E5%A4%8D%E8%AE%AD%E7%BB%83-1/</url>
+    <content><![CDATA[<p>因为这次都是简单操作，也是康复训练，就不写什么解释啦，贴上实验的代码表示自己确实在努力试图康复好啦！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">print(&quot;hello world&quot;)</span><br><span class="line">hello world</span><br><span class="line"></span><br><span class="line">2+3</span><br><span class="line">5</span><br><span class="line">2*3</span><br><span class="line">6</span><br><span class="line">2**3</span><br><span class="line">8</span><br><span class="line">4**2</span><br><span class="line">16</span><br><span class="line">（2+3）**4</span><br><span class="line">  File &quot;&lt;input&gt;&quot;, line 1</span><br><span class="line">    （2+3）**4</span><br><span class="line">     ^</span><br><span class="line">SyntaxError: invalid character in identifier</span><br><span class="line">(2+3)**4</span><br><span class="line">625</span><br><span class="line">a&#x3D;2</span><br><span class="line">b&#x3D;3</span><br><span class="line">a**b</span><br><span class="line">8</span><br><span class="line">3*0.1</span><br><span class="line">0.30000000000000004</span><br><span class="line">&quot;hello &quot;+str(a**b)+&quot;!&quot;</span><br><span class="line">&#39;hello 8!&#39;</span><br><span class="line">3&#x2F;2</span><br><span class="line">1.5</span><br><span class="line">int(2&#x2F;3)</span><br><span class="line">0</span><br><span class="line">import this</span><br><span class="line">The Zen of Python, by Tim Peters</span><br><span class="line">Beautiful is better than ugly.</span><br><span class="line">Explicit is better than implicit.</span><br><span class="line">Simple is better than complex.</span><br><span class="line">Complex is better than complicated.</span><br><span class="line">Flat is better than nested.</span><br><span class="line">Sparse is better than dense.</span><br><span class="line">Readability counts.</span><br><span class="line">Special cases aren&#39;t special enough to break the rules.</span><br><span class="line">Although practicality beats purity.</span><br><span class="line">Errors should never pass silently.</span><br><span class="line">Unless explicitly silenced.</span><br><span class="line">In the face of ambiguity, refuse the temptation to guess.</span><br><span class="line">There should be one-- and preferably only one --obvious way to do it.</span><br><span class="line">Although that way may not be obvious at first unless you&#39;re Dutch.</span><br><span class="line">Now is better than never.</span><br><span class="line">Although never is often better than *right* now.</span><br><span class="line">If the implementation is hard to explain, it&#39;s a bad idea.</span><br><span class="line">If the implementation is easy to explain, it may be a good idea.</span><br><span class="line">Namespaces are one honking great idea -- let&#39;s do more of those!</span><br><span class="line">bicycle&#x3D;[&#39;123&#39;,&#39;234&#39;]</span><br><span class="line">bicycle</span><br><span class="line">[&#39;123&#39;, &#39;234&#39;]</span><br><span class="line">bicycle[0]</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[0].title()</span><br><span class="line">&#39;123&#39;</span><br><span class="line">bicycle[-2]</span><br><span class="line">&#39;123&#39;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>python</category>
