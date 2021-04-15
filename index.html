@@ -585,7 +585,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  921字
+                  1.1k字
                 </span>
               
 
@@ -601,7 +601,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  4分钟
                 </span>
               
             </div>
@@ -643,6 +643,13 @@
 </blockquote>
 <p>这个题目开始尝试了字符串的处理方法，后面发现想感觉尝试正则表达会更加简便，在做题后进行了对于正则表达式的学习，对于正则表达式的总结写在了另一篇博客上。这道题也同样是一道比较考验理解能力的题目。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">n&#x3D;input()</span><br><span class="line">n&#x3D;int(n)</span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    pa &#x3D; re.compile(r&quot;(?P&lt;a&gt;A*)P(?P&lt;b&gt;A+)T(?P&lt;c&gt;A*)&quot;)</span><br><span class="line">    if pa.match(s):</span><br><span class="line">        co &#x3D; re.split(r&quot;P|T&quot;, s)</span><br><span class="line">        if len(co[0]) * len(co[1]) &#x3D;&#x3D; len(co[2]):</span><br><span class="line">            print(&quot;YES&quot;)</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;NO&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;NO&quot;)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+<h5 id="4-1004"><a href="#4-1004" class="headerlink" title="4.1004"></a>4.1004</h5><blockquote>
+<p>&nbsp;&nbsp;读入 n（&gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。</p>
+</blockquote>
+<p>这个题是一个很基础的读取输入，判断保留，输出的题，很简单，但之前没有注意输入的时候input（）会直接读取一行，和之前c熟悉的只会读取一个一个不一样，所以要使用split（‘ ’）分割！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">n&#x3D;int(input())</span><br><span class="line">max&#x3D;0</span><br><span class="line">min&#x3D;100</span><br><span class="line"></span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    s&#x3D;s.split( )</span><br><span class="line">    name&#x3D;s[0]</span><br><span class="line">    num&#x3D;s[1]</span><br><span class="line">    grade&#x3D;s[2]</span><br><span class="line">    grade&#x3D;int(grade)</span><br><span class="line">    if grade&gt;max:</span><br><span class="line">        max&#x3D;grade</span><br><span class="line">        max_name&#x3D;name</span><br><span class="line">        max_num&#x3D;num</span><br><span class="line">    if grade&lt;min:</span><br><span class="line">        min&#x3D;grade</span><br><span class="line">        min_name&#x3D;name</span><br><span class="line">        min_num&#x3D;num</span><br><span class="line"></span><br><span class="line">print(max_name+&#39; &#39;+max_num)</span><br><span class="line">print(min_name+&#39; &#39;+min_num)</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -1449,7 +1456,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.9k</span>
+    <span title="Site words total count">4.1k</span>
   
 </div>
 

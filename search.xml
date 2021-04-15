@@ -10,7 +10,7 @@
 
 
 
-<h1 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h1><h4 id="【】为一个字符组，用于匹配中括号中的元素任意一次"><a href="#【】为一个字符组，用于匹配中括号中的元素任意一次" class="headerlink" title="【】为一个字符组，用于匹配中括号中的元素任意一次"></a>【】为一个字符组，用于匹配中括号中的元素任意一次</h4><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" class="" title="[]">
+<h1 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h1><h2 id="【】为一个字符组，用于匹配中括号中的元素任意一次"><a href="#【】为一个字符组，用于匹配中括号中的元素任意一次" class="headerlink" title="【】为一个字符组，用于匹配中括号中的元素任意一次"></a>【】为一个字符组，用于匹配中括号中的元素任意一次</h2><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/1.jpg" class="" title="[]">
 
 <p>在这个例子中，字符组的应用让我们同时匹配大小写的p</p>
 <p>在字符组中，-可以用以表示区间</p>
@@ -25,7 +25,7 @@
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/4.jpg" class="" title="[]">
 
 <p>当使用^时，所有字符集中原本会被匹配的字符都不再被匹配，而原本不会被匹配的部分则会被匹配。</p>
-<h4 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h4><table>
+<h2 id="快捷方式"><a href="#快捷方式" class="headerlink" title="快捷方式"></a>快捷方式</h2><table>
 <thead>
 <tr>
 <th>转义字符</th>
@@ -66,7 +66,7 @@
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/7.jpg" class="" title="[]">
 
 <p>更换为$匹配的就是尾部了</p>
-<h4 id="其他匹配"><a href="#其他匹配" class="headerlink" title="其他匹配"></a>其他匹配</h4><p>.可以对任意字符进行匹配</p>
+<h2 id="其他匹配"><a href="#其他匹配" class="headerlink" title="其他匹配"></a>其他匹配</h2><p>.可以对任意字符进行匹配</p>
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/8.jpg" class="" title="[]">
 
 
@@ -104,7 +104,7 @@
 
 <hr>
 <p>到现在我们就完成了正则的基础部分，可以进行进阶部分的学习</p>
-<h1 id="正则进阶"><a href="#正则进阶" class="headerlink" title="正则进阶"></a>正则进阶</h1><h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><p>使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
+<h1 id="正则进阶"><a href="#正则进阶" class="headerlink" title="正则进阶"></a>正则进阶</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><p>使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。</p>
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/19.jpg" class="" title="[]">
 
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/20.jpg" class="" title="[]">
@@ -118,24 +118,24 @@
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/22.jpg" class="" title="[]">
 
 <p>在这个例子中第一个分组就没有被捕获。但依照它的形式能够使用或者条件，这也是分组的应用</p>
-<h6 id="分组中的回溯引用"><a href="#分组中的回溯引用" class="headerlink" title="分组中的回溯引用"></a>分组中的回溯引用</h6><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/23.jpg" class="" title="[]">
+<h2 id="分组中的回溯引用"><a href="#分组中的回溯引用" class="headerlink" title="分组中的回溯引用"></a>分组中的回溯引用</h2><img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/23.jpg" class="" title="[]">
 
 <p>通过\数字的形式，可以回溯匹配之前分组的内容的表示，在收集html网页中不同标签内的内容很有帮助。</p>
-<h6 id="环视（正向先行断言）"><a href="#环视（正向先行断言）" class="headerlink" title="环视（正向先行断言）"></a>环视（正向先行断言）</h6><p>正向先行断言：(?=表达式)，指在某个位置向右看，表示所在位置右侧必须能匹配表达式</p>
+<h2 id="环视（正向先行断言）"><a href="#环视（正向先行断言）" class="headerlink" title="环视（正向先行断言）"></a>环视（正向先行断言）</h2><p>正向先行断言：(?=表达式)，指在某个位置向右看，表示所在位置右侧必须能匹配表达式</p>
 <p>例如：</p>
 <p>我喜欢你 我喜欢 我喜欢我 喜欢 喜欢你</p>
 <p>如果要取出喜欢两个字，要求这个喜欢后面有你，这个时候就要这么写：喜欢(?=你)，这就是正向先行断言。</p>
 <p>先行断言可以用来判断字符串是否符合特定的规则，例如提取包含至少一个大小写字母的字符串</p>
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/24.jpg" class="" title="[]">
 
-<h6 id="反向先行断言"><a href="#反向先行断言" class="headerlink" title="反向先行断言"></a>反向先行断言</h6><p>反向先行断言(?!表达式)的作用是保证右边不能出现某字符。</p>
+<h2 id="反向先行断言"><a href="#反向先行断言" class="headerlink" title="反向先行断言"></a>反向先行断言</h2><p>反向先行断言(?!表达式)的作用是保证右边不能出现某字符。</p>
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/25.jpg" class="" title="[]">
 
-<h6 id="正向后行断言"><a href="#正向后行断言" class="headerlink" title="正向后行断言"></a>正向后行断言</h6><p>先行断言和后行断言只有一个区别，即先行断言从左往右看，后行断言从右往左看。</p>
+<h2 id="正向后行断言"><a href="#正向后行断言" class="headerlink" title="正向后行断言"></a>正向后行断言</h2><p>先行断言和后行断言只有一个区别，即先行断言从左往右看，后行断言从右往左看。</p>
 <p>正向后行断言：(?&lt;=表达式)，指在某个位置向左看，表示所在位置左侧必须能匹配表达式</p>
 <img src="/2021/04/13/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/26.jpg" class="" title="[]">
 
-<h6 id="反向后行断言"><a href="#反向后行断言" class="headerlink" title="反向后行断言"></a>反向后行断言</h6><p>反向后行断言：(?&lt;!表达式)，指在某个位置向左看，表示所在位置左侧不能匹配表达式</p>
+<h3 id="反向后行断言"><a href="#反向后行断言" class="headerlink" title="反向后行断言"></a>反向后行断言</h3><p>反向后行断言：(?&lt;!表达式)，指在某个位置向左看，表示所在位置左侧不能匹配表达式</p>
 <p>（这个题是做崩了，看了一会儿没看明白！找了本电子书再拜读一下好了！）</p>
 <hr>
 <p>这篇博客就写到这里啦，关于正则其实还并没有完全掌握，后面学习时有机会会再做些补充</p>
@@ -168,7 +168,14 @@
 <p>1003 我要通过！ (20 分)<br><br>&nbsp;&nbsp;“答案正确”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“答案正确”大派送 —— 只要读入的字符串满足下列条件，系统就输出“答案正确”，否则输出“答案错误”。<br><br>&nbsp;&nbsp;得到“答案正确”的条件是：<br><br>&nbsp;&nbsp;字符串中必须仅有 P、 A、 T这三种字符，不可以包含其它字符；<br><br>&nbsp;&nbsp;任意形如 xPATx 的字符串都可以获得“答案正确”，其中 x或者是空字符串，或者是仅由字母 A 组成的字符串；<br><br>&nbsp;&nbsp;如果 aPbTc 是正确的，那么 aPbATca 也是正确的，其中 a、 b、 c 均或者是空字符串，或者是仅由字母 A 组成的字符串。<br><br>&nbsp;&nbsp;现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“答案正确”的。<br></p>
 </blockquote>
 <p>这个题目开始尝试了字符串的处理方法，后面发现想感觉尝试正则表达会更加简便，在做题后进行了对于正则表达式的学习，对于正则表达式的总结写在了另一篇博客上。这道题也同样是一道比较考验理解能力的题目。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">n&#x3D;input()</span><br><span class="line">n&#x3D;int(n)</span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    pa &#x3D; re.compile(r&quot;(?P&lt;a&gt;A*)P(?P&lt;b&gt;A+)T(?P&lt;c&gt;A*)&quot;)</span><br><span class="line">    if pa.match(s):</span><br><span class="line">        co &#x3D; re.split(r&quot;P|T&quot;, s)</span><br><span class="line">        if len(co[0]) * len(co[1]) &#x3D;&#x3D; len(co[2]):</span><br><span class="line">            print(&quot;YES&quot;)</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;NO&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;NO&quot;)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import re</span><br><span class="line">n&#x3D;input()</span><br><span class="line">n&#x3D;int(n)</span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    pa &#x3D; re.compile(r&quot;(?P&lt;a&gt;A*)P(?P&lt;b&gt;A+)T(?P&lt;c&gt;A*)&quot;)</span><br><span class="line">    if pa.match(s):</span><br><span class="line">        co &#x3D; re.split(r&quot;P|T&quot;, s)</span><br><span class="line">        if len(co[0]) * len(co[1]) &#x3D;&#x3D; len(co[2]):</span><br><span class="line">            print(&quot;YES&quot;)</span><br><span class="line">        else:</span><br><span class="line">            print(&quot;NO&quot;)</span><br><span class="line">    else:</span><br><span class="line">        print(&quot;NO&quot;)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+
+<h5 id="4-1004"><a href="#4-1004" class="headerlink" title="4.1004"></a>4.1004</h5><blockquote>
+<p>&nbsp;&nbsp;读入 n（&gt;0）名学生的姓名、学号、成绩，分别输出成绩最高和成绩最低学生的姓名和学号。</p>
+</blockquote>
+<p>这个题是一个很基础的读取输入，判断保留，输出的题，很简单，但之前没有注意输入的时候input（）会直接读取一行，和之前c熟悉的只会读取一个一个不一样，所以要使用split（‘ ’）分割！</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">n&#x3D;int(input())</span><br><span class="line">max&#x3D;0</span><br><span class="line">min&#x3D;100</span><br><span class="line"></span><br><span class="line">for i in range(n):</span><br><span class="line">    s&#x3D;input()</span><br><span class="line">    s&#x3D;s.split( )</span><br><span class="line">    name&#x3D;s[0]</span><br><span class="line">    num&#x3D;s[1]</span><br><span class="line">    grade&#x3D;s[2]</span><br><span class="line">    grade&#x3D;int(grade)</span><br><span class="line">    if grade&gt;max:</span><br><span class="line">        max&#x3D;grade</span><br><span class="line">        max_name&#x3D;name</span><br><span class="line">        max_num&#x3D;num</span><br><span class="line">    if grade&lt;min:</span><br><span class="line">        min&#x3D;grade</span><br><span class="line">        min_name&#x3D;name</span><br><span class="line">        min_num&#x3D;num</span><br><span class="line"></span><br><span class="line">print(max_name+&#39; &#39;+max_num)</span><br><span class="line">print(min_name+&#39; &#39;+min_num)</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>python</category>
       </categories>
